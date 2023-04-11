@@ -9,7 +9,8 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+    width: 98%;
+	max-width: 960px;
     margin: 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
@@ -58,6 +59,7 @@ header img {
 #nav_menu ul li a {
     display: block;
     width: 160px;
+	max-width: 960px;
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
@@ -73,18 +75,25 @@ header img {
     position: absolute;
     top: 100%;
 }
+
 #nav_menu ul ul li {
 	float: none;
+
 }
+
 #nav_menu ul li:hover > ul {
 	display: block;
 }
+
 #nav_menu > ul::after {
     content: "";
     clear: both;
     display: block;
 }
 
+#nav_menu ul li ul a {
+	width: 100%;
+}
 /* the styles for the section */
 section {
 	width: 525px;
@@ -133,6 +142,9 @@ article img {
 	float: right;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
+	max-width: 40%;
+	min-width: 150px;
+
 }
 
 /* the styles for the aside */
@@ -165,4 +177,64 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+/*media query*/
+#mobile_menu {
+	display: none;
+}
+
+@media only screen and (max-width: 832px){
+	aside h2 a {
+		font-size: 85%;
+	}
+	section h1 {
+		font-size: 125%;
+
+	}
+	section h2 {
+		font-size: 110%;
+	}
+	aside h2 {
+		font-size: 110%;
+	}
+}
+
+@media only screen and (max-width: 650px){
+	header img {
+		float: none;
+	}
+	header {
+		text-align: center;
+	}
+	section {
+		float: none;
+	}
+	aside {
+		float: none;
+		padding-right: 20px;
+	}
+	article img{
+		max-width: 30%;
+	}
+	aside div{
+		column-count: 2;
+	}
+	#nav_menu {
+		display: none;
+	}
+	#mobile_menu {
+		display: block;
+	}
+	.slicknav_menu {
+		background-color: #800000; !important;
+	}
+
+
+}
+
+@media only screen and (max-width: 230px) {
+	head, body, footer {
+		font-size: 90%;
+	}
 }
