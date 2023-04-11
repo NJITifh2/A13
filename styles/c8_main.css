@@ -184,8 +184,8 @@ footer p {
 	display: none;
 }
 
-@media only screen and (max-width: 832px){
-	aside h2 a {
+@media only screen and (max-width: 734px){
+	aside h3 a {
 		font-size: 85%;
 	}
 	section h1 {
@@ -200,7 +200,7 @@ footer p {
 	}
 }
 
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 648px){
 	header img {
 		float: none;
 	}
@@ -227,7 +227,7 @@ footer p {
 		display: block;
 	}
 	.slicknav_menu {
-		background-color: #800000; !important;
+		background-color: #800000 !important;
 	}
 
 
